@@ -13,35 +13,35 @@ export class AppService implements OnModuleInit {
             fullname: "Kiều Việt Cường",
             name: "Cường",
             date: "16/10",
-            year: 2020,
+            year: 1992,
             prefix: ""
         },
         {
             fullname: "Hoàng Ngọc Hiếu",
             name: "Hiếu",
             date: "28/02",
-            year: 2020,
+            year: 1992,
             prefix: ""
         },
         {
             fullname: "Nguyễn Tiến Mạnh",
             name: "Mạnh",
             date: "31/07",
-            year: 2020,
+            year: 1993,
             prefix: ""
         },
         {
             fullname: "Phạm Gia Huy",
             name: "Huy",
             date: "17/08",
-            year: 2020,
+            year: 1995,
             prefix: ""
         },
         {
             fullname: "Nguyễn Văn Nghĩa",
             name: "Nghĩa",
             date: "21/12",
-            year: 2020,
+            year: 1991,
             prefix: ""
         },
         {
@@ -49,70 +49,70 @@ export class AppService implements OnModuleInit {
             name: "Đạt",
             date: "07/12",
             prefix: "Anh",
-            year: 2020,
+            year: 1984,
             boss: true
         },
         {
             fullname: "Nguyễn Việt Dũng",
             name: "Dũng",
             date: "01/08",
-            year: 2020,
+            year: 1984,
             prefix: "Anh"
         },
         {
             fullname: "Trần Việt Hùng",
             name: "Hùng",
             date: "03/07",
-            year: 2020,
+            year: 1989,
             prefix: "Anh"
         },
         {
             fullname: "Phạm Đắc Bảo",
             name: "Bảo",
             date: "24/04",
-            year: 2020,
+            year: 1991,
             prefix: "Anh"
         },
         {
             fullname: "Nguyễn Thị Sim",
             name: "Sim",
             date: "28/05",
-            year: 2020,
+            year: 1997,
             prefix: "Chị"
         },
         {
             fullname: "Phạm Văn Thái",
             name: "Thái",
             date: "01/07",
-            year: 2020,
+            year: 1990,
             prefix: "Anh"
         },
         {
             fullname: "Lê Thanh Tùng",
             name: "Tùng",
-            date: "06/10",
-            year: 2020,
+            date: "07/10",
+            year: 1994,
             prefix: ""
         },
         {
             fullname: "Nguyễn Đức Linh",
             name: "Linh",
             date: "10/01",
-            year: 2020,
+            year: 1995,
             prefix: ""
         },
         {
             fullname: "Nguyễn Mạnh Quân",
             name: "Quân",
             date: "30/06",
-            year: 2020,
+            year: 1991,
             prefix: "Anh"
         },
         {
             fullname: "Phan Văn Khánh",
             name: "Khánh",
             date: "27/01",
-            year: 2020,
+            year: 1998,
             prefix: "Anh"
         },
         {
@@ -125,14 +125,14 @@ export class AppService implements OnModuleInit {
         {
             fullname: "Nguyễn Thành Lộc",
             name: "Lộc Fuho",
-            date: "08/10",
-            year: 2020,
+            date: "26/9",
+            year: 1993,
             prefix: ""
         }
     ]
     private bot: any;
     private listVideo = [
-        'public/actor.mp4', 'public/dog.mp4', 'public/mion.mp4', 'public/person2.mp4', 'public/princess.mp4'
+        'public/actor.mp4', 'public/dog.mp4', 'public/mion.mp4', 'public/person2.mp4', 'public/princess.mp4', 'public/princess.mp4'
     ]
 
     private sep = [
@@ -167,16 +167,73 @@ export class AppService implements OnModuleInit {
                 "Thành công rực rỡ."
         },
         {
-            data: "Hôm nay ..." +
-                "\n" +
-                "Chúc Mừng Bạn được sinh ra trong đời\n" +
-                "Chúc bạn vui vẻ thảnh thơi\n" +
-                "Sức khỏe tuyệt vời, cuộc sống an khang\n" +
-                "Chúc bạn kiến thức vững vàng\n" +
-                "Giúp bạn phát triển hành trang ngành nghề\n" +
-                "Chúc bạn thỏa chí đam mê\n" +
-                "Thành công, thành đạt tràn trề ước mơ"
-        }
+            data: " Hôm nay sinh nhật bạn\n" +
+                "Tớ chẳng có quà đâu\n" +
+                "Chỉ có tấm thiệp màu\n" +
+                "Làm quà thay lời chúc.\n" +
+                "Chúc cho bạn hạnh phúc\n" +
+                "Thêm tuổi mới bình yên\n" +
+                "Và có thật nhiều tiền\n" +
+                "Cùng thành công rực rỡ.\n" +
+                "Chúc cho bạn sinh nhật vui vẻ\n" +
+                "Cùng gia đình khe khẽ cười vang\n" +
+                "Nhất là được cùng với nàng\n" +
+                "Nắm tay dạo phố rộn ràng cười vui\n" +
+                "Và chúc bạn đẩy lùi buồn khổ\n" +
+                "Niềm tin thì tuôn sổ không thôi\n" +
+                "Để cho bạn mãi yêu đời\n" +
+                "Không còn sầu nhớ một thời đã qua."
+        },
+        {
+            data: "Chúc mừng sinh nhật người ta\n" +
+                "Chớ buồn vì những cách xa bây giờ!\n" +
+                "Ngày mai giáp mộng đôi bờ…\n" +
+                "Niềm vui bù lại trăm chờ vạn mong,\n" +
+                "Hôm nay thắp ngọn nến hồng,\n" +
+                "Chúc mừng sinh nhật hiệp lòng nhất tâm!\n" +
+                "Chúc qua bão gió thăng trầm\n" +
+                "Bằng an vạn sự trăm năm quân hoà,\n" +
+                "Lời thơ chấp bút thăng hoa,\n" +
+                "Thay quà sinh nhật của ta tặng người!\n" +
+                "Chúc mai một giấc mộng đời,\n" +
+                "Luôn luôn như ý như lời thơ ca."
+        },
+        {
+            data:  " Sinh nhật vui vẻ Ý nha.\n" +
+                "Chúc cho hạnh phúc đậm đà tình yêu.\n" +
+                "Chúc cho sức khỏe thật nhiều.\n" +
+                "Chúc cho may mắn vạn điều bình an.\n" +
+                "Lắm tiền, nhiều bạc giàu sang.\n" +
+                "Niềm vui, hạnh phúc càng ngày càng xinh.\n" +
+                "Chúc luôn sung túc gia đình.\n" +
+                "Thành công tiếp nối hành trình công danh.\n" +
+                "Chúc cho ấp áp an lành.\n" +
+                "Bao nhiêu hạnh phúc quây quanh mỗi ngày.\n" +
+                "Không buồn cũng chẳng đắng cay.\n" +
+                "Không đau chẳng khổ mỗi ngày cười thôi.\n" +
+                "Nụ cười sẽ mãi trên môi.\n" +
+                "Hãy luôn chia sẻ cùng tôi..nếu cần.\n" +
+                "Vai này dựa nhé bạn thân.\n" +
+                "Nhớ là tôi mãi ở gần bạn thôi !"
+        },
+        {
+            data:  " Sinh nhật vui vẻ Ý nha.\n" +
+                "Chúc cho hạnh phúc đậm đà tình yêu.\n" +
+                "Chúc cho sức khỏe thật nhiều.\n" +
+                "Chúc cho may mắn vạn điều bình an.\n" +
+                "Lắm tiền, nhiều bạc giàu sang.\n" +
+                "Niềm vui, hạnh phúc càng ngày càng xinh.\n" +
+                "Chúc luôn sung túc gia đình.\n" +
+                "Thành công tiếp nối hành trình công danh.\n" +
+                "Chúc cho ấp áp an lành.\n" +
+                "Bao nhiêu hạnh phúc quây quanh mỗi ngày.\n" +
+                "Không buồn cũng chẳng đắng cay.\n" +
+                "Không đau chẳng khổ mỗi ngày cười thôi.\n" +
+                "Nụ cười sẽ mãi trên môi.\n" +
+                "Hãy luôn chia sẻ cùng tôi..nếu cần.\n" +
+                "Vai này dựa nhé bạn thân.\n" +
+                "Nhớ là tôi mãi ở gần bạn thôi !"
+        },
     ]
 
     getHello(): string {
@@ -217,12 +274,13 @@ export class AppService implements OnModuleInit {
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    private title = '✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴\n'
+    private title = '✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴\n';
 
-    @Cron('45 * * * * *')
+    @Cron('0 8 * * *')
     handleCron() {
+        this.bot.sendMessage(1134903144, 'HEATH CHECK');
         this.persons.forEach(item => {
-            let today = moment().format('DD/MM')
+            let today = moment().format('DD/MM');
             let next2day = moment().add(2, 'd').format('DD/MM');
 
             if (today == item.date) {
@@ -231,15 +289,15 @@ export class AppService implements OnModuleInit {
                 }
                 let yearOld = moment().year() - item.year;
                 let rdMessageNumber = this.getRndInteger(0, this.nhanvien.length);
-                let message = this.title + "*Chúc mừng sinh nhật " + item.prefix + " " + item.name + " vừa tròn " + yearOld + " tuổi!*\n \n" + this.nhanvien[rdMessageNumber].data;
+                let message = this.title + "\n*Chúc mừng sinh nhật " + item.prefix + " " + item.name + " vừa tròn " + yearOld + " tuổi!*\n \n" + this.nhanvien[rdMessageNumber].data;
                 this.bot.sendMessage(this.gp3Id, message, opts);
-                let number = this.getRndInteger(0, 4);
+                let number = this.getRndInteger(0, 5);
                 console.log(number);
                 this.bot.sendAnimation(this.gp3Id, this.listVideo[number]);
             }
             if (next2day == item.date) {
                 let yearOld = moment().year() - item.year;
-                let message = this.title + "Hai ngày tới là sinh nhật " + yearOld +  " tuổi của " + item.prefix + " " + item.name + " nhé!\n";
+                let message = this.title + "Hai ngày tới là sinh nhật " + yearOld + " tuổi của " + item.prefix + " " + item.name + " nhé!\n";
                 this.bot.sendMessage(this.congDoanId, message);
             }
         })
