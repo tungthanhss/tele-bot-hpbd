@@ -90,7 +90,7 @@ export class AppService implements OnModuleInit {
         {
             fullname: "Lê Thanh Tùng",
             name: "Tùng",
-            date: "07/10",
+            date: "27/10",
             year: 1994,
             prefix: ""
         },
