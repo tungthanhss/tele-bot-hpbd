@@ -5,8 +5,8 @@ import * as moment from "moment";
 @Injectable()
 export class AppService implements OnModuleInit {
     private readonly logger = new Logger(AppService.name);
-    private gp3Id = 1134903144;
-    private congDoanId = 1134903144;
+    private gp3Id = -507953035;
+    private congDoanId = -552189417;
 
     private persons = [
         {
@@ -14,21 +14,21 @@ export class AppService implements OnModuleInit {
             name: "Cường",
             date: "16/10",
             year: 1992,
-            prefix: ""
+            prefix: "Anh"
         },
         {
             fullname: "Hoàng Ngọc Hiếu",
             name: "Hiếu",
             date: "28/02",
             year: 1992,
-            prefix: ""
+            prefix: "Anh"
         },
         {
             fullname: "Nguyễn Tiến Mạnh",
             name: "Mạnh",
             date: "31/07",
             year: 1993,
-            prefix: ""
+            prefix: "Anh"
         },
         {
             fullname: "Phạm Gia Huy",
@@ -42,7 +42,7 @@ export class AppService implements OnModuleInit {
             name: "Nghĩa",
             date: "21/12",
             year: 1991,
-            prefix: ""
+            prefix: "Anh"
         },
         {
             fullname: "Vũ Đức Đạt",
@@ -127,7 +127,7 @@ export class AppService implements OnModuleInit {
             name: "Lộc Fuho",
             date: "26/9",
             year: 1993,
-            prefix: ""
+            prefix: "Anh"
         }
     ]
     private bot: any;
@@ -251,7 +251,7 @@ export class AppService implements OnModuleInit {
             console.log(msg)
             let Hi = "hi";
             if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
-                this.bot.sendMessage(msg.from.id, "Hello " + msg.from.first_name + " what would you like to know about me ?");
+                this.bot.sendMessage(msg.from.id, "Hello 1.4");
             }
             let response = "Who are you";
             if (msg.text.toString().toLowerCase().includes("who")) {
@@ -276,7 +276,7 @@ export class AppService implements OnModuleInit {
 
     private title = '✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴\n';
 
-    @Cron('0 8 * * *')
+    @Cron('15 8 * * *')
     handleCron() {
         this.bot.sendMessage(1134903144, 'HEATH CHECK');
         this.persons.forEach(item => {
@@ -291,13 +291,15 @@ export class AppService implements OnModuleInit {
                 let rdMessageNumber = this.getRndInteger(0, this.nhanvien.length);
                 let message = this.title + "\n*Chúc mừng sinh nhật " + item.prefix + " " + item.name + " vừa tròn " + yearOld + " tuổi!*\n \n" + this.nhanvien[rdMessageNumber].data;
                 this.bot.sendMessage(this.gp3Id, message, opts);
+                this.bot.sendMessage(1134903144, message, opts);
                 let number = this.getRndInteger(0, 5);
                 console.log(number);
                 this.bot.sendAnimation(this.gp3Id, this.listVideo[number]);
             }
             if (next2day == item.date) {
                 let yearOld = moment().year() - item.year;
-                let message = this.title + "Hai ngày tới là sinh nhật " + yearOld + " tuổi của " + item.prefix + " " + item.name + " nhé!\n";
+                let message = this.title + "Hai ngày tới là sinh nhật " + yearOld + " tuổi của " + item.prefix + " " + item.fullname + " nhé!\n";
+                this.bot.sendMessage(1134903144, message);
                 this.bot.sendMessage(this.congDoanId, message);
             }
         })
