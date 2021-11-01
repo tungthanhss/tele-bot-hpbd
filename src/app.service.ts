@@ -128,6 +128,13 @@ export class AppService implements OnModuleInit {
             date: "26/9",
             year: 1993,
             prefix: "Anh"
+        },
+        {
+            fullname: "Nguyễn Quốc Hùng",
+            name: "Hùng",
+            date: "01/11",
+            year: 1998,
+            prefix: "Em"
         }
     ]
     private bot: any;
