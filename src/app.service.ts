@@ -258,7 +258,7 @@ export class AppService implements OnModuleInit {
             console.log(msg)
             let Hi = "hi";
             if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
-                this.bot.sendMessage(msg.from.id, "Hello 1.4");
+                this.bot.sendMessage(msg.from.id, "Hello 1.5");
             }
             let response = "Who are you";
             if (msg.text.toString().toLowerCase().includes("who")) {
