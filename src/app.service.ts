@@ -135,6 +135,34 @@ export class AppService implements OnModuleInit {
             date: "01/11",
             year: 1998,
             prefix: "Em"
+        },
+        {
+            fullname: "Phan Văn Thìn",
+            name: "Thìn",
+            date: "10/07",
+            year: 1991,
+            prefix: "Anh"
+        },
+        {
+            fullname: "Quách Hoàng Anh",
+            name: "Quách Hoàng Anh",
+            date: "11/07",
+            year: 1980,
+            prefix: "Anh"
+        },
+        {
+            fullname: "Nguyễn Đức Linh",
+            name: "Linh",
+            date: "06/04",
+            year: 1985,
+            prefix: "Anh"
+        },
+        {
+            fullname: "Hà Văn Thân",
+            name: "Thân",
+            date: "22/03",
+            year: 1989,
+            prefix: "Anh"
         }
     ]
     private bot: any;
@@ -283,7 +311,7 @@ export class AppService implements OnModuleInit {
 
     private title = '✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴♥ ‿ ♥✴\n';
 
-    @Cron('15 8 * * *')
+    @Cron('30 8 * * *')
     handleCron() {
         this.bot.sendMessage(1134903144, 'HEATH CHECK');
         this.persons.forEach(item => {
